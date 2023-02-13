@@ -14,7 +14,7 @@ interface ICarProps extends ICar {
 const CarContainer  = styled.div`
     width: 16.5em;
     min-height: 22.2em;
-    max-height: 22em;
+    max-height: 25em;
     box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
     ${tw`
         flex
@@ -56,6 +56,7 @@ const PricesContainer = styled.div`
     flex
     justify-start
     mt-3
+
   `};
 `;
 
@@ -72,7 +73,10 @@ const DailyPrice = styled.h5`
     text-red-500
     font-bold
     justify-start
+    text-sm
     mt-3
+    ml-3
+    mr-3
   `};
 `;
 
@@ -161,7 +165,14 @@ export function Car(props: ICarProps) {
                 </SmallIcon>
                 <CarInfo>{gearType}</CarInfo>
             </CarDetail>
+            <CarDetail>
+                <SmallIcon>
+                    <FontAwesomeIcon icon={faFillDrip} />
+                </SmallIcon>
+                <CarInfo>{gas}</CarInfo>
+            </CarDetail>
         </CarDetailsContainer>
+        <RentButton theme="filled" text="Rent now" />
     </CarContainer>
     )
 }
