@@ -2,7 +2,6 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://magharmoni.github.io/rent-a-car",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -36,7 +35,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "firebase build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -61,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@types/brainhubeu__react-carousel": "^2.0.5",
     "gh-pages": "^5.0.0",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",

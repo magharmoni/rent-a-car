@@ -8,6 +8,7 @@ import { Marginer } from "../../components/marginer";
 import { BookingsSteps } from "./bookingSteps";
 import { AboutUs } from "./aboutUs";
 import { TopCars } from "./topCars";
+import { Footer } from "../../components/footer";
 
 const PageContainer = styled.div`
 ${tw`
@@ -29,5 +30,6 @@ export function HomePage() {
         <BookingsSteps />
         <AboutUs />
         <TopCars />
+        <Footer />
     </PageContainer>
 }

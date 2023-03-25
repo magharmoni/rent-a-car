@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Car } from "../../components/car";
 import { ICar } from "../../typings/car";
+// import Carousel, { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
 
 const TopCarsContainer = styled.div`
     ${tw` 
@@ -64,9 +66,22 @@ const testCar: ICar = {
   };
 
 export function TopCars() {
+    const [current, setCurrent] = useState(0);
+
 return <TopCarsContainer>
     <Title>Explore Our Top Deals</Title>
     <CarsContainer>
+        {/* <Carousel 
+            value={current} 
+            onChange={setCurrent} 
+            slides={[
+                (<Car {...testCar2} />), 
+                (<Car {...testCar} />), 
+                (<Car {...testCar2} />), 
+                (<Car {...testCar} />), 
+                (<Car {...testCar2} />) ]}
+        />
+        <Dots value={current} onChange={setCurrent} number={2} /> */}
         <Car {...testCar } />
         <Car {...testCar2 } />
         <Car {...testCar } />
